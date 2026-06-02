@@ -1,3 +1,3 @@
-These are programs to caliculat & conduct an experiment.
-AS my program is constracted on previos researches, caliculating program doesn't work well.
-However, you can see overall process.
+This repository contains programs to calculate and conduct experiments. 
+
+Please note that this code is based on previous research from our laboratory. Due to copyright and intellectual property restrictions, the dependent functions cannot be published here. As a result, the program cannot be executed standalone, but you can review the overall calculation process and my original implementation.
