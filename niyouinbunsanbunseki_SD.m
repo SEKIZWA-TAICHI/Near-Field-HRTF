@@ -1,11 +1,11 @@
-%% 1. シート名を指定してデータを読み込む
+%% 1. シート名の指定
 filename = 'all_データ整理_8_mirror2.xlsx'; 
 sheetName = 'Analysis_Data(SD)'; % 回答距離のシート
 opts = detectImportOptions(filename, 'Sheet', sheetName);
 opts.VariableNamingRule = 'preserve'; % 日本語ヘッダー維持
 T = readtable(filename, opts);
 
-%% 2. 変数の抽出
+%% 2. 変数抽出
 try
     Condition = T.('条件');       % 合成条件
     TargetDist = T.('目標距離');  % 目標距離
@@ -24,7 +24,7 @@ y = ResponseDist(valid_idx);   % 従属変数
 g1 = Condition(valid_idx);     % 要因1：合成条件
 g2 = TargetDist(valid_idx);    % 要因2：目標距離
 
-%% 4. 二元配置分散分析 (Two-way ANOVA)
+%% 4. 二元配置分散分析
 [p, tbl, stats] = anovan(y, {g1, g2}, ...
     'model', 'interaction', ...
     'varnames', {'Condition', 'TargetDistance'});
