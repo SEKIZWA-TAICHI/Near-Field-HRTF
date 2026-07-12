@@ -41,7 +41,6 @@ figure('Name', '多重比較 (Condition)');
 [c, m, h, gn] = multcompare(stats, 'Dimension', 1); 
 title('条件間の多重比較 (Main Effect of Condition)');
 
-% コンソールに見やすく結果を表示
 disp('--- 多重比較の結果 (p値 < 0.05 なら有意差あり) ---');
 disp('   Group1     Group2    LowerCI      Diff     UpperCI    p-value');
 disp(c);
